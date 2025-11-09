@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG Paralelos" parallel="tests" thread-count="4">
+    <test name="ChromeTests" parallel="classes" thread-count="4">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="automationexercise.test.CadastroTest" />
+            <class name="automationexercise.test.LoginTest" />
+        </classes>
+    </test>
+
+    <test name="EdgeTests" parallel="classes" thread-count="4">
+        <parameter name="browser" value="edge" />
+        <classes>
+            <class name="automationexercise.test.CadastroTest" />
+            <class name="automationexercise.test.LoginTest" />
+        </classes>
+    </test>
+</suite>
